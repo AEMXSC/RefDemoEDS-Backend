@@ -1,4 +1,8 @@
-# Sample AEM project template
+# RefDemoEDS-Backend
+
+Optional Services & Configurations you can deploy via pipeline to your AEM Environment
+
+## About
 
 This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
