@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/refdemoeds",
+        "create path (nt:unstructured) /content/dam/refdemoeds/jcr:content",
+        "set properties on /content/dam/refdemoeds/jcr:content\n  set cq:conf{String} to /conf/refdemoeds\n  set jcr:title{String} to \"Reference Demo EDS\"\nend"
+    ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/refdemoeds" mode="merge"/>
+    <filter root="/content/refdemoeds" mode="merge"/>
+    <filter root="/content/dam/refdemoeds" mode="merge">
+        <exclude pattern="/content/dam/refdemoeds(/.*)?"/>
+        <include pattern="/content/dam/refdemoeds/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/refdemoeds/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/refdemoeds" mode="merge"/>
+</workspaceFilter>

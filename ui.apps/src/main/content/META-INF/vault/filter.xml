@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/refdemoeds/clientlibs"/>
+    <filter root="/apps/refdemoeds/components"/>
+    <filter root="/apps/refdemoeds/i18n"/>
+</workspaceFilter>
