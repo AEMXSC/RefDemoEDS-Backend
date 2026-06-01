@@ -1,0 +1,32 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+# Allow components JSON model
+/0101 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
+
+# Allow manifest.webmanifest files located in the content
+/0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
+
+# ── Download-list block (DAM folder listings used by aem.live/aem.page) ──
+# Allow Sling default JSON view + depth-selectored JSON on DAM folders
+# so the download-list block can list child assets from the publish side.
+# Read-only methods only. OPTIONS is required for CORS preflight.
+/0110 { /type "allow" /method '(GET|HEAD|OPTIONS)' /path "/content/dam/*" /extension "json" }
+
+# Allow the AEM Assets HTTP API for the same listing purpose.
+/0111 { /type "allow" /method '(GET|HEAD|OPTIONS)' /url "/api/assets/*" }
+
+# ── DAM video binaries (dam-video block streams these directly on aem.live) ──
+# The default Adobe dispatcher filter set permits common image/document
+# extensions but not always video formats. Allow video MIME extensions on
+# /content/dam/ so <video> sources resolve from publish.
+/0112 { /type "allow" /method '(GET|HEAD|OPTIONS)' /path "/content/dam/*" /extension '(mp4|m4v|mov|webm|ogv|ogg)' }
+
+# ── /bin servlets (explicit paths first; wildcard last) ──
+# Default dispatcher ACL blocks /bin; allow on publish.
+/0120 { /type "allow" /url "/bin/querybuilder.json" }

@@ -1,0 +1,21 @@
+#
+# This file contains the cache rules, and can be customized.
+#
+# By default, it includes the default rules.
+#
+
+$include "./default_rules.any"
+
+# Do not cache /bin servlet responses (explicit paths + wildcard)
+/0100 {
+    /glob "/bin/querybuilder.json"
+    /type "deny"
+}
+/0101 {
+    /glob "/bin/pdftextextract*"
+    /type "deny"
+}
+/0102 {
+    /glob "/bin/*"
+    /type "deny"
+}

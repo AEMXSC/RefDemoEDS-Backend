@@ -28,8 +28,13 @@
     <module>ui.apps.structure</module>
     <module>ui.config</module>
     <module>ui.content</module>
+    <module>dispatcher</module>
+   
+   <!-- Disabliung Tests for Demo projects, Enable if required--> 
+   <!--
+   <module>ui.tests</module>
     <module>it.tests</module>
-    <module>ui.tests</module>
+   -->
   </modules>
   <properties>
     <aem.host>localhost</aem.host>

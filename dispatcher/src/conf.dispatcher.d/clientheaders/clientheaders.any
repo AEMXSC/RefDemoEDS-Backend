@@ -1,0 +1,14 @@
+#
+# This file contains the request headers, and can be customized.
+#
+# By default, it includes the default client headers.
+#
+
+$include "./default_clientheaders.any"
+
+# Forward CORS request headers so the AEM Granite CORS Policy filter can
+# evaluate cross-origin requests from aem.live / aem.page and respond
+# with the appropriate Access-Control-Allow-Origin headers.
+"Origin"
+"Access-Control-Request-Method"
+"Access-Control-Request-Headers"
