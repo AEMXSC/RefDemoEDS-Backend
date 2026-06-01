@@ -1,21 +1,18 @@
 {
-  "supportscredentials":true,
+  "supportscredentials":false,
   "supportedmethods":[
     "GET",
     "HEAD",
+    "OPTIONS",
     "POST"
   ],
   "alloworiginregexp":[
-    "https://.*\\.csb\\.app",
-    "https://cdpn\\.io",
-    "https://.*\\.hlx\\.page",
-    "https://.*\\.hlx\\.live",
-    "https://.*\\.aem\\.page",
-    "https://.*\\.aem\\.live",
-    "https://.*\\.github\\.io",
+    "^https:\\/\\/[^/]+\\.aem\\.live$",
+    "^https:\\/\\/[^/]+\\.aem\\.page$",
+    "^https:\\/\\/[^/]+\\.hlx\\.live$",
+    "^https:\\/\\/[^/]+\\.hlx\\.page$",
     "https://localhost:.*",
-    "http://localhost:.*",
-    "https://www\\.your-domain\\.com/.*"
+    "http://localhost:.*"
   ],
   "maxage": 1800,
   "supportedheaders":[
@@ -28,9 +25,9 @@
     "Authorization"
   ],
   "allowedpaths":[
-    "/graphql/execute.json/.*",
-    "/content/.*",
-    "/conf/.*",
-    "/api/assets/.*"
+    "/api/assets/.*",
+    "/content/dam/.*\\.json",
+    "/content/dam/.*\\.[0-9]+\\.json",
+    "/bin/querybuilder\\.json"
   ]
 }
