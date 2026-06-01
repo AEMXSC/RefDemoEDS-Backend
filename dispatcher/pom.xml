@@ -7,16 +7,16 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobedemosystemprogram24</groupId>
-        <artifactId>aem-adobedemosystemprogram24-project</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.adobe.refdemoeds</groupId>
+        <artifactId>refdemoeds</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>aem-adobedemosystemprogram24-project.dispatcher.cloud</artifactId>
+    <artifactId>refdemoeds.dispatcher.cloud</artifactId>
     <packaging>pom</packaging>
-    <name>adobedemosystemprogram24 - Dispatcher</name>
-    <description>HTTP &amp; Dispatcher configurations for adobedemosystemprogram24</description>
+    <name>Reference Demo EDS - Dispatcher</name>
+    <description>HTTP &amp; Dispatcher configurations for Reference Demo EDS</description>
 
     <build>
         <plugins>
